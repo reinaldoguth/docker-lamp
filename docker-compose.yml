@@ -16,9 +16,9 @@ services:
             - "3306:3306"
         command: --default-authentication-plugin=mysql_native_password
         environment:
-            MYSQL_DATABASE: iscmg
-            MYSQL_USER: iscmg
-            MYSQL_PASSWORD: iscmg
+            MYSQL_DATABASE: dbteste
+            MYSQL_USER: user
+            MYSQL_PASSWORD: user
             MYSQL_ROOT_PASSWORD: root
         volumes:
             - ./dump:/docker-entrypoint-initdb.d
@@ -33,7 +33,7 @@ services:
         ports:
             - "81:80"
         environment:
-            MYSQL_USER: iscmg
-            MYSQL_PASSWORD: iscmg
+            MYSQL_USER: user
+            MYSQL_PASSWORD: user
             MYSQL_ROOT_PASSWORD: root
 
